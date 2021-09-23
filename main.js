@@ -3,7 +3,7 @@ console.log('hello depuis main');
 const technosDiv = document.querySelector('#technos');
 
 function loadTechnologies(technos) {
-    fetch('https://us-central1-pwa-techno-2020.cloudfunctions.net/getTechnos')
+    fetch('https://us-central1-pwa-technos-yasmine.cloudfunctions.net/getTechnos')
         .then(response => {
             response.json()
                 .then(technos => {
@@ -233,3 +233,5 @@ function urlBase64ToUint8Array(base64String) {
     }
     return outputArray;
   }
+  	
+
