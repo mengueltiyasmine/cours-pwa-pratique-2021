@@ -1,0 +1,34 @@
+{
+  "technos": [
+    {
+      "id": 1,
+      "name": "Angular",
+      "description": "framework de google",
+      "url": "https://angular.io/"
+    },
+    {
+      "id": 2,
+      "name": "ReactJs",
+      "description": "framework de facebook",
+      "url": "https://fr.reactjs.org/"
+    },
+    {
+      "id": 3,
+      "name": "Flutter",
+      "description": "framework de google",
+      "url": "https://flutter.dev/"
+    },
+    {
+      "id": 4,
+      "name": "Node",
+      "description": "JavaScript côté back-end",
+      "url": "https://nodejs.org/en/"
+    },
+    {
+      "name": "nom",
+      "description": "prénom",
+      "url": "url github",
+      "id": 5
+    }
+  ]
+}

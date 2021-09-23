@@ -1,0 +1,25 @@
+{
+  "name": "pwa-pratique-2020",
+  "version": "1.0.0",
+  "description": "Cours pwa # Mise à jour",
+  "main": "main.js",
+  "scripts": {
+    "jsonserver": "json-server -p 3001 --watch db.json",
+    "start": "live-server --port=3000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quentinbc/pwa-pratique-2020.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/quentinbc/pwa-pratique-2020/issues"
+  },
+  "homepage": "https://github.com/quentinbc/pwa-pratique-2020#readme",
+  "dependencies": {
+    "web-push": "^3.4.4"
+  }
+}

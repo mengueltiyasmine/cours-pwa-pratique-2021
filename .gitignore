@@ -1,0 +1,5 @@
+# fichier .gitignore à la racine qui permet
+# de ne pas mettre à jour certains fichiers ou dossiers
+# le dossier node_modules n'a pas besoin d'être mis à jour
+# puisque toutes les dépendances sont dans le fichier package.json
+node_modules/
