@@ -213,13 +213,42 @@ self.addEventListener("push", evt => {
     };
     self.registration.showNotification(title, objNotification);
 })
+ 
 // 7.3 Notifications persistantes (envoyées depuis le service worker)
-// Affichage de la notification
 self.registration.showNotification("Notification du SW", {
-    body:"je suis une notification dite persistante"
+    body:"je suis une notification dite persistante",
+  
+    // 7.4 Options de notifications grâce aux actions
+    actions:[
+        {action:"accept", title:"accepter"},
+        {action: "refuse", title: "refuser"}
+    ]
 })
  
-// Ecoute de l'événement close
-self.addEventListener("notificationclose", evt => {
-    console.log("Notification fermée", evt);
+// 7.4 Options de notifications grâce aux actions
+// Ecouteur au clic d'un des deux boutons de la notification
+self.addEventListener("notificationclick", evt => {
+    console.log("notificationclick evt", evt);
+    if(evt.action === "accept"){
+        console.log("vous avez accepté");
+    } else if(evt.action === "refuse"){
+        console.log("vous avez refusé");
+    } else{
+        console.log("vous avez cliqué sur la notification (pas sur un bouton)");
+    }
+})
+// 7.4 Options de notifications grâce aux actions
+// Ecouteur au clic d'un des deux boutons de la notification
+self.addEventListener("notificationclick", evt => {
+    console.log("notificationclick evt", evt);
+    if(evt.action === "accept"){
+        console.log("vous avez accepté");
+    } else if(evt.action === "refuse"){
+        console.log("vous avez refusé");
+    } else{
+        console.log("vous avez cliqué sur la notification (pas sur un bouton)");
+    }
+  
+    // 7.5 Fermer programmatiquement une notification
+    evt.notification.close();
 })
