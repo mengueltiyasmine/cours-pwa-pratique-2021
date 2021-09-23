@@ -69,7 +69,7 @@ if(navigator.serviceWorker) {
         
         	// tentative d'obtention d'une souscription
             // public vapid key générée par web-push, en prod appel d'api via fetch plutôt que static
-            const publicKey = "BN4YXZBpAD_ym_CHqvRQXB7UemsopIS06d3VE7DtQE2gzb28q25kgS02S-ijL1vQLTFSFjQngzZK_J7D92a48_8";
+            const publicKey = "BAqPpl5snI2RR6wkcuSzdvZWGeEqNk4GGJvMWpTqrepaOrEqknEAS5dfcOakn0mSrh7o0PAYv8Urt8GUdCzILvw";
             console.log("publicKey", publicKey);
             registration.pushManager.getSubscription().then(subscription => {
             
@@ -136,7 +136,7 @@ function urlBase64ToUint8Array(base64String) {
   }
   return outputArray;
 }
-	
+/*	
 //..
 //7.1 Notifications non persistantes
 // // Vérifie si la fonctionalité est disponible et si 
@@ -217,3 +217,19 @@ if(window.Notification && window.Notification !== "denied"){
     })
 }
 */
+// 8.4 Récupération ou création d'une souscription auprès d'un push service
+// Fonction pour convertir string en array buffer pour envoie au push service
+function urlBase64ToUint8Array(base64String) {
+    const padding = '='.repeat((4 - base64String.length % 4) % 4);
+    const base64 = (base64String + padding)
+      .replace(/-/g, '+')
+      .replace(/_/g, '/');
+   
+    const rawData = window.atob(base64);
+    const outputArray = new Uint8Array(rawData.length);
+   
+    for (let i = 0; i < rawData.length; ++i) {
+      outputArray[i] = rawData.charCodeAt(i);
+    }
+    return outputArray;
+  }

@@ -21,6 +21,6 @@
   "homepage": "https://github.com/quentinbc/pwa-pratique-2020#readme",
   "dependencies": {
     "live-server": "^1.2.1",
-    "web-push": "^3.4.4"
+    "web-push": "^3.4.5"
   }
 }
