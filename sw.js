@@ -213,3 +213,13 @@ self.addEventListener("push", evt => {
     };
     self.registration.showNotification(title, objNotification);
 })
+// 7.3 Notifications persistantes (envoyées depuis le service worker)
+// Affichage de la notification
+self.registration.showNotification("Notification du SW", {
+    body:"je suis une notification dite persistante"
+})
+ 
+// Ecoute de l'événement close
+self.addEventListener("notificationclose", evt => {
+    console.log("Notification fermée", evt);
+})
